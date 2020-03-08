@@ -1,2 +1,7 @@
-*.pdf
+# Keine Ausgabe (.class)
 out/
+
+# Keine Resourcen die nicht mir gehören
+*.pdf
+res/*
+docs/*
