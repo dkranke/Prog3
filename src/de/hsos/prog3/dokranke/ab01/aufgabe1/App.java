@@ -13,6 +13,7 @@ public class App {
         nachbarn.add(new Nachbar("Vorname4", "Nachname4"));
         nachbarn.add(new Nachbar("Vorname1", "Nachname1"));
 
+
         Optional<String> auflistung = nachbarn.stream()
                 .map(Nachbar::toString)
                 .reduce((string1, string2) -> string1 + ", " + string2);
