@@ -1,4 +1,4 @@
-package de.hsos.prog3.dokranke.ab01;
+package de.hsos.prog3.dokranke.ab1;
 
 import java.util.HashSet;
 import java.util.Optional;
