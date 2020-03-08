@@ -30,11 +30,11 @@ public class Orchester {
     }
 
     public void proben() {
-        verhalten = new Probe();
+        verhalten = new Konzert.Probe();
     }
 
     public void auftreten() {
-        verhalten = new Konzert();
+        verhalten = new Konzert.Auftritt();
     }
 
     public void spielen() {
