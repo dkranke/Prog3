@@ -13,20 +13,16 @@ public class SimpleAudioPlayerAdapter implements StdAudioPlayer {
     //private SimpleAudioPlayer wrappedPlayer;
 
     @Override
-    public void einmaligAbspielen(URL url) {
+    public void einmaligAbspielen(URL url) throws IOException {
         wiederholtAbspielen(url, 0);
     }
 
     @Override
-    public void wiederholtAbspielen(URL url, int wiederholungen) {
-        try {
+    public void wiederholtAbspielen(URL url, int wiederholungen) throws IOException {
             SimpleAudioPlayer player = new SimpleAudioPlayer(url);
             player.setDebug(debug);
             player.verboseLogging(true);
             player.play(0);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     @Override

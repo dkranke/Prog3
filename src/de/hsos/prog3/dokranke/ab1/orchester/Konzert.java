@@ -3,6 +3,7 @@ package de.hsos.prog3.dokranke.ab1.orchester;
 import de.hsos.prog3.dokranke.ab1.audio.StdAudioPlayer;
 import de.hsos.prog3.dokranke.ab1.audio.adapter.SimpleAudioPlayerAdapter;
 
+import java.io.IOException;
 import java.net.URL;
 
 public class Konzert {
@@ -12,11 +13,14 @@ public class Konzert {
 
         @Override
         public void spielen(Orchester orchester) {
-            // Hier sollte etwas fehlschlagen können, aber StdAudioPlayer ist nicht so definiert
-            StdAudioPlayer player = new SimpleAudioPlayerAdapter();
-            player.tonAn();
-            URL url = Orchester.class.getResource(orchester.getAudioDateiKonzert());
-            player.einmaligAbspielen(url);
+            try {
+                StdAudioPlayer player = new SimpleAudioPlayerAdapter();
+                player.tonAn();
+                URL url = Orchester.class.getResource(orchester.getAudioDateiKonzert());
+                player.einmaligAbspielen(url);
+            } catch (IOException e) {
+                System.out.println("Auftritt wird abgebrochen");
+            }
         }
     }
 
@@ -24,13 +28,16 @@ public class Konzert {
 
         @Override
         public void spielen(Orchester orchester) {
-            // Hier sollte etwas fehlschlagen können, aber StdAudioPlayer ist nicht so definiert
-            orchester.getMusikerInnen().forEach(musikerIn -> {
-                StdAudioPlayer player = new SimpleAudioPlayerAdapter();
-                player.tonAn();
-                URL url = Probe.class.getResource(musikerIn.getInstrument().getAudiodatei());
-                player.einmaligAbspielen(url);
-            });
+            try {
+                for (MusikerIn musikerIn : orchester.getMusikerInnen()) {
+                    StdAudioPlayer player = new SimpleAudioPlayerAdapter();
+                    player.tonAn();
+                    URL url = Probe.class.getResource(musikerIn.getInstrument().getAudiodatei());
+                    player.einmaligAbspielen(url);
+                }
+            } catch (IOException e) {
+                System.out.println("Auftritt wird abgebrochen");
+            }
         }
     }
 }

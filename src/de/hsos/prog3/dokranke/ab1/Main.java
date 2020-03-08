@@ -9,7 +9,7 @@ import java.net.URL;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         URL url = Main.class.getResource("/Baritone.wav");
         StdAudioPlayer adapter = new SimpleAudioPlayerAdapter();
         adapter.tonAn();
