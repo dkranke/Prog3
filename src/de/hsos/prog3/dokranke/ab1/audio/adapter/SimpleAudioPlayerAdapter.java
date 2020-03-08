@@ -8,7 +8,9 @@ import java.net.URL;
 
 public class SimpleAudioPlayerAdapter implements StdAudioPlayer {
 
-    private boolean debug = true;
+    private boolean debug;
+    // Normalerweise mit wrappedPlayer statt debug, aber setAudioFile ist privat
+    //private SimpleAudioPlayer wrappedPlayer;
 
     @Override
     public void einmaligAbspielen(URL url) {
