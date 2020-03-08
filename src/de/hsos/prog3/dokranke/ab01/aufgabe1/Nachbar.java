@@ -12,11 +12,13 @@ public class Nachbar {
         this.nachname = nachname;
     }
 
+    // Für die Ausgabe
     @Override
     public String toString() {
         return vorname + " " + nachname;
     }
 
+    // Für das Set
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) {

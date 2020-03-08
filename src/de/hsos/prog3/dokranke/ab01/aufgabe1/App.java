@@ -6,6 +6,7 @@ import java.util.Optional;
 public class App {
 
     public static void main(String[] args) {
+        // Set ist wie List, nur ohne Duplikate
         HashSet<Nachbar> nachbarn = new HashSet<>();
         nachbarn.add(new Nachbar("Vorname1", "Nachname1"));
         nachbarn.add(new Nachbar("Vorname2", "Nachname2"));
@@ -13,10 +14,12 @@ public class App {
         nachbarn.add(new Nachbar("Vorname4", "Nachname4"));
         nachbarn.add(new Nachbar("Vorname1", "Nachname1"));
 
-
+        // Ausgabe-Text generieren
         Optional<String> auflistung = nachbarn.stream()
                 .map(Nachbar::toString)
                 .reduce((string1, string2) -> string1 + ", " + string2);
+
+        // Text Ausgeben (falls es etwas zum Ausgeben gibt)
         auflistung.ifPresent(System.out::println);
     }
 }
