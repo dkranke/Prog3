@@ -2,6 +2,7 @@
 out/
 
 # Keine Resourcen die nicht mir gehören
-*.pdf
-res/*
 docs/*
+lib/*
+res/*
+*.pdf
