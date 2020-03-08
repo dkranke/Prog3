@@ -1,0 +1,47 @@
+package de.hsos.prog3.dokranke.ab1.orchester;
+
+import java.util.Collection;
+import java.util.HashSet;
+
+public class Orchester {
+
+    private String bezeichnung;
+    private String audioDateiKonzert;
+    private Dirigent dirigentIn;
+    private Collection<MusikerIn> musikerInnen;
+    private Verhalten verhalten;
+
+    public Orchester(String bezeichnung, String audioDateiKonzert) {
+        this.bezeichnung = bezeichnung;
+        this.audioDateiKonzert = audioDateiKonzert;
+        musikerInnen = new HashSet<>();
+    }
+
+    public void addDirigentIn(Dirigent dirigentIn) {
+        this.dirigentIn = dirigentIn;
+    }
+
+    public void addMusikerInnen(MusikerIn musikerIn) {
+        musikerInnen.add(musikerIn);
+    }
+
+    public Collection<MusikerIn> getMusikerInnen() {
+        return musikerInnen;
+    }
+
+    public void proben() {
+        verhalten = new Probe();
+    }
+
+    public void auftreten() {
+        verhalten = new Konzert();
+    }
+
+    public void spielen() {
+        verhalten.spielen(this);
+    }
+
+    public String getAudioDateiKonzert() {
+        return audioDateiKonzert;
+    }
+}
