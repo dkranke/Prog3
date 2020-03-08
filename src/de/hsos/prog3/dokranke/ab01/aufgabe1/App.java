@@ -16,6 +16,6 @@ public class App {
         Optional<String> auflistung = nachbarn.stream()
                 .map(Nachbar::toString)
                 .reduce((string1, string2) -> string1 + ", " + string2);
-       auflistung.ifPresent(System.out::println);
+        auflistung.ifPresent(System.out::println);
     }
 }
