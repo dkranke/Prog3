@@ -2,6 +2,7 @@ package de.hsos.prog3.dokranke.ab1.orchester;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Objects;
 
 public class Orchester {
 
@@ -12,6 +13,9 @@ public class Orchester {
     private Verhalten verhalten;
 
     public Orchester(String bezeichnung, String audioDateiKonzert) {
+        Objects.requireNonNull(bezeichnung);
+        Objects.requireNonNull(audioDateiKonzert);
+
         this.bezeichnung = bezeichnung;
         this.audioDateiKonzert = audioDateiKonzert;
         musikerInnen = new HashSet<>();
@@ -22,6 +26,8 @@ public class Orchester {
     }
 
     public void addMusikerInnen(MusikerIn musikerIn) {
+        Objects.requireNonNull(musikerIn);
+        
         musikerInnen.add(musikerIn);
     }
 

@@ -8,6 +8,8 @@ public class MusikerIn extends Mitglied {
 
     public MusikerIn(String name, Instrument instrument) {
         super(name);
+        Objects.requireNonNull(instrument);
+
         this.instrument = instrument;
     }
 

@@ -8,6 +8,9 @@ public class Nachbar {
     private String nachname;
 
     public Nachbar(String vorname, String nachname) {
+        Objects.requireNonNull(vorname);
+        Objects.requireNonNull(nachname);
+
         this.vorname = vorname;
         this.nachname = nachname;
     }

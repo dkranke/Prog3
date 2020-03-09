@@ -5,6 +5,7 @@ import de.hsos.prog3.dokranke.ab1.audio.StdAudioPlayer;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 
 public class SimpleAudioPlayerAdapter implements StdAudioPlayer {
 
@@ -19,10 +20,12 @@ public class SimpleAudioPlayerAdapter implements StdAudioPlayer {
 
     @Override
     public void wiederholtAbspielen(URL url, int wiederholungen) throws IOException {
-            SimpleAudioPlayer player = new SimpleAudioPlayer(url);
-            player.setDebug(debug);
-            player.verboseLogging(true);
-            player.play(0);
+        Objects.requireNonNull(url);
+
+        SimpleAudioPlayer player = new SimpleAudioPlayer(url);
+        player.setDebug(debug);
+        player.verboseLogging(true);
+        player.play(0);
     }
 
     @Override

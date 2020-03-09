@@ -5,6 +5,7 @@ import de.hsos.prog3.dokranke.ab1.audio.adapter.SimpleAudioPlayerAdapter;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 
 public class Konzert {
 
@@ -13,6 +14,8 @@ public class Konzert {
 
         @Override
         public void spielen(Orchester orchester) {
+            Objects.requireNonNull(orchester);
+
             try {
                 StdAudioPlayer player = new SimpleAudioPlayerAdapter();
                 player.tonAn();
@@ -28,6 +31,8 @@ public class Konzert {
 
         @Override
         public void spielen(Orchester orchester) {
+            Objects.requireNonNull(orchester);
+
             try {
                 for (MusikerIn musikerIn : orchester.getMusikerInnen()) {
                     StdAudioPlayer player = new SimpleAudioPlayerAdapter();
