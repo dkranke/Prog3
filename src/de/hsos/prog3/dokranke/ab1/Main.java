@@ -11,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         URL url = Main.class.getResource("/Baritone.wav");
-        StdAudioPlayer adapter = new SimpleAudioPlayerAdapter();
+        StdAudioPlayer adapter = new SimpleAudioPlayerAdapter(url);
         adapter.tonAn();
         adapter.einmaligAbspielen(url);
     }

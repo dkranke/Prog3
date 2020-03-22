@@ -9,9 +9,16 @@ import java.util.Objects;
 
 public class SimpleAudioPlayerAdapter implements StdAudioPlayer {
 
+    private SimpleAudioPlayer wrappedPlayer;
+    // Normalerweise ohne debug, aber setAudioFile und getDebug sind privat
     private boolean debug;
-    // Normalerweise mit wrappedPlayer statt debug, aber setAudioFile ist privat
-    //private SimpleAudioPlayer wrappedPlayer;
+
+    public SimpleAudioPlayerAdapter(URL url) throws IOException {
+        wrappedPlayer = new SimpleAudioPlayer(url);
+        wrappedPlayer.getAudioFile();
+        wrappedPlayer.setDebug(false);
+        wrappedPlayer.verboseLogging(true);
+    }
 
     @Override
     public void einmaligAbspielen(URL url) throws IOException {
@@ -22,19 +29,24 @@ public class SimpleAudioPlayerAdapter implements StdAudioPlayer {
     public void wiederholtAbspielen(URL url, int wiederholungen) throws IOException {
         Objects.requireNonNull(url);
 
-        SimpleAudioPlayer player = new SimpleAudioPlayer(url);
-        player.setDebug(debug);
-        player.verboseLogging(true);
-        player.play(0);
+        if (!wrappedPlayer.getAudioFile().equals(url)) {
+            wrappedPlayer = new SimpleAudioPlayer(url);
+            wrappedPlayer.getAudioFile();
+            wrappedPlayer.setDebug(debug);
+            wrappedPlayer.verboseLogging(true);
+        }
+        wrappedPlayer.play(0);
     }
 
     @Override
     public void tonAus() {
+        wrappedPlayer.setDebug(true);
         debug = true;
     }
 
     @Override
     public void tonAn() {
+        wrappedPlayer.setDebug(false);
         debug = false;
     }
 }

@@ -17,9 +17,9 @@ public class Konzert {
             Objects.requireNonNull(orchester);
 
             try {
-                StdAudioPlayer player = new SimpleAudioPlayerAdapter();
-                player.tonAn();
                 URL url = Orchester.class.getResource(orchester.getAudioDateiKonzert());
+                StdAudioPlayer player = new SimpleAudioPlayerAdapter(url);
+                player.tonAn();
                 player.einmaligAbspielen(url);
             } catch (IOException e) {
                 System.out.println("Auftritt wird abgebrochen");
@@ -35,9 +35,9 @@ public class Konzert {
 
             try {
                 for (MusikerIn musikerIn : orchester.getMusikerInnen()) {
-                    StdAudioPlayer player = new SimpleAudioPlayerAdapter();
-                    player.tonAn();
                     URL url = Probe.class.getResource(musikerIn.getInstrument().getAudiodatei());
+                    StdAudioPlayer player = new SimpleAudioPlayerAdapter(url);
+                    player.tonAn();
                     player.einmaligAbspielen(url);
                 }
             } catch (IOException e) {
