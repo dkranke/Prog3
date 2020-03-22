@@ -23,3 +23,5 @@ public class App {
         auflistung.ifPresent(System.out::println);
     }
 }
+
+// Domenik Kranke <domenik@kranke.de>

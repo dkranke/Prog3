@@ -16,3 +16,5 @@ public class Main {
         adapter.einmaligAbspielen(url);
     }
 }
+
+// Domenik Kranke <domenik@kranke.de>

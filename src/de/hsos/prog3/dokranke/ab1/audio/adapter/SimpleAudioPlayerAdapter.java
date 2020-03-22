@@ -38,3 +38,5 @@ public class SimpleAudioPlayerAdapter implements StdAudioPlayer {
         debug = false;
     }
 }
+
+// Domenik Kranke <domenik@kranke.de>

@@ -16,3 +16,5 @@ public abstract class Mitglied {
         return name;
     }
 }
+
+// Domenik Kranke <domenik@kranke.de>

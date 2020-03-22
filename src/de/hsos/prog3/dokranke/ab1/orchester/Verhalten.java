@@ -6,3 +6,5 @@ public interface Verhalten {
 
     void spielen(Orchester orchester);
 }
+
+// Domenik Kranke <domenik@kranke.de>

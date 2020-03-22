@@ -38,3 +38,5 @@ public class Nachbar {
         return Objects.hash(vorname, nachname);
     }
 }
+
+// Domenik Kranke <domenik@kranke.de>

@@ -6,3 +6,5 @@ public class Dirigent extends Mitglied {
         super(name);
     }
 }
+
+// Domenik Kranke <domenik@kranke.de>

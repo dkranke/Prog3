@@ -32,3 +32,5 @@ public class MusikerIn extends Mitglied {
         return Objects.hash(getName(), instrument);
     }
 }
+
+// Domenik Kranke <domenik@kranke.de>

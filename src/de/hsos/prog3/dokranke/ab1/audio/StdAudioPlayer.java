@@ -10,3 +10,5 @@ public interface StdAudioPlayer {
     void tonAus();
     void tonAn();
 }
+
+// Domenik Kranke <domenik@kranke.de>
