@@ -15,10 +15,13 @@ public class Quadrat {
     }
 
     public void darstellenRahmen(Interaktionsbrett ib) {
-
+        ib.neuesRechteck(x, y, seitenlaenge, seitenlaenge);
     }
 
     public void darstellenFuellung(Interaktionsbrett ib) {
-
+        ib.neuesRechteck(x, y, seitenlaenge, seitenlaenge);
+        for (int i = 0; i < seitenlaenge; i++) {
+            ib.neueLinie(x, y + i, x + seitenlaenge, y + i);
+        }
     }
 }
