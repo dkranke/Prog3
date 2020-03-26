@@ -7,7 +7,7 @@ public class NutzerEingabe {
     private EinUndAusgabe io;
 
     public NutzerEingabe(EinUndAusgabe io) {
-
+        this.io = io;
     }
 
     public int anzahlZeilenDesSpielfelds() {
