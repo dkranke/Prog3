@@ -1,4 +1,4 @@
-package de.hsos.prog3.dokranke.ab1.orchester;
+package de.hsos.prog3.dokranke.ab01.orchester;
 
 import java.util.Objects;
 

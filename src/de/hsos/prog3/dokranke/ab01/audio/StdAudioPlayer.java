@@ -1,4 +1,4 @@
-package de.hsos.prog3.dokranke.ab1.audio;
+package de.hsos.prog3.dokranke.ab01.audio;
 
 import java.io.IOException;
 import java.net.URL;

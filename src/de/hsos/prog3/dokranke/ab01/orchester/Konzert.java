@@ -1,7 +1,7 @@
-package de.hsos.prog3.dokranke.ab1.orchester;
+package de.hsos.prog3.dokranke.ab01.orchester;
 
-import de.hsos.prog3.dokranke.ab1.audio.StdAudioPlayer;
-import de.hsos.prog3.dokranke.ab1.audio.adapter.SimpleAudioPlayerAdapter;
+import de.hsos.prog3.dokranke.ab01.audio.StdAudioPlayer;
+import de.hsos.prog3.dokranke.ab01.audio.adapter.SimpleAudioPlayerAdapter;
 
 import java.io.IOException;
 import java.net.URL;

@@ -1,6 +1,4 @@
-package de.hsos.prog3.dokranke.ab1.orchester;
-
-import de.hsos.prog3.dokranke.ab1.audio.StdAudioPlayer;
+package de.hsos.prog3.dokranke.ab01.orchester;
 
 public interface Verhalten {
 

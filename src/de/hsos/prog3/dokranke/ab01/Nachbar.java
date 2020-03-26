@@ -1,4 +1,4 @@
-package de.hsos.prog3.dokranke.ab1;
+package de.hsos.prog3.dokranke.ab01;
 
 import java.util.Objects;
 
