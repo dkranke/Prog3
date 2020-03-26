@@ -30,3 +30,5 @@ public class SpielfeldDarstellung {
         ib.abwischen();
     }
 }
+
+// Domenik Kranke <domenik@kranke.de>

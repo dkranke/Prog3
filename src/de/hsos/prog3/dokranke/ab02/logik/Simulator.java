@@ -74,3 +74,5 @@ public class Simulator implements Simulation {
         this.beiAenderung = beiAenderung;
     }
 }
+
+// Domenik Kranke <domenik@kranke.de>

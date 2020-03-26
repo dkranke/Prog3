@@ -6,6 +6,8 @@ import de.hsos.prog3.dokranke.ab02.logik.Simulator;
 import de.hsos.prog3.dokranke.ab02.util.EinUndAusgabe;
 import de.hsos.prog3.dokranke.ab02.util.Interaktionsbrett;
 
+import java.util.Objects;
+
 public class Steuerung implements BeiAenderung {
 
     private NutzerEingabe nutzerEingabe;
@@ -28,6 +30,8 @@ public class Steuerung implements BeiAenderung {
     }
 
     public Steuerung(Simulation simulation) {
+        Objects.requireNonNull(simulation);
+
         this.simulation = simulation;
     }
 
@@ -52,3 +56,5 @@ public class Steuerung implements BeiAenderung {
         spielfeldDarstellung.spielfeldDarstellen(neueGeneration);
     }
 }
+
+// Domenik Kranke <domenik@kranke.de>

@@ -12,3 +12,5 @@ public class SpielfeldDarstellungTest {
         spielfeldDarstellung.spielfeldDarstellen(spielfeld);
     }
 }
+
+// Domenik Kranke <domenik@kranke.de>

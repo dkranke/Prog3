@@ -40,3 +40,5 @@ public class NutzerEingabe {
         return eingabe;
     }
 }
+
+// Domenik Kranke <domenik@kranke.de>

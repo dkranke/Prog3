@@ -20,3 +20,5 @@ public class SimulatorTest {
         simulator.berechneFolgeGeneration(2);
     }
 }
+
+// Domenik Kranke <domenik@kranke.de>

@@ -12,3 +12,5 @@ public class QuadratTest {
         q2.darstellenFuellung(ib);
     }
 }
+
+// Domenik Kranke <domenik@kranke.de>

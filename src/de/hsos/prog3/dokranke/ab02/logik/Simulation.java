@@ -6,3 +6,5 @@ public interface Simulation {
     void berechneFolgeGeneration(int berechnungsschritte);
     void anmeldenFuerAktualisierungBeiAenderung(BeiAenderung beiAenderung);
 }
+
+// Domenik Kranke <domenik@kranke.de>

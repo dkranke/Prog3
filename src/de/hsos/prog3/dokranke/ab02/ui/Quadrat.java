@@ -2,6 +2,8 @@ package de.hsos.prog3.dokranke.ab02.ui;
 
 import de.hsos.prog3.dokranke.ab02.util.Interaktionsbrett;
 
+import java.util.Objects;
+
 public class Quadrat {
 
     private int x;
@@ -15,13 +17,19 @@ public class Quadrat {
     }
 
     public void darstellenRahmen(Interaktionsbrett ib) {
+        Objects.requireNonNull(ib);
+
         ib.neuesRechteck(x, y, seitenlaenge, seitenlaenge);
     }
 
     public void darstellenFuellung(Interaktionsbrett ib) {
+        Objects.requireNonNull(ib);
+
         ib.neuesRechteck(x, y, seitenlaenge, seitenlaenge);
         for (int i = 0; i < seitenlaenge; i++) {
             ib.neueLinie(x, y + i, x + seitenlaenge, y + i);
         }
     }
 }
+
+// Domenik Kranke <domenik@kranke.de>
