@@ -120,10 +120,10 @@ public class Ringpuffer<T> implements Deque<T>, RandomAccess, Serializable, Clon
 
 		if (size >= capacity) {
 			if (discarding) {
-				// Entfernen
-				elements.remove(head + 1);
 				// Hinzufügen
 				elements.add(tail, t);
+				// Entfernen
+				elements.remove(head + 1);
 				head = (head + 1) % capacity;
 				return true;
 			} else {
